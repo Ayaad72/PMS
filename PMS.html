@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT SCREEN</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a class="active" href="./Login.html">Home</a></li>
+            <li><a href="./Registerartion.html">Registeration</a></li>
+            <li><a href="#contact">Sign-Up</a></li>
+            <li style="float:right"><a href="#about">About</a></li>
+        </ul>
+    </header>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+    <div class="container">
+        <h1>PRODUCT SCREEN</h1>
+        <div class="mb-3">
+            <input type="text" id="productName" class="form-control" placeholder="Product Name" required />
+        </div>
+        <div class="mb-3">
+            <input type="number" id="productModel" class="form-control" placeholder="Product Model" required />
+        </div>
+        <button onclick="addProduct()" class="btn btn-primary">Add Product</button>
+        <div id="alertContainer"></div>
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Model</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+    </div>
+    <script src="./PMS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
